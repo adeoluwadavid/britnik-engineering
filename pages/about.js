@@ -54,7 +54,6 @@ export default function About() {
                     <div className="hidden pt-4" id="burger2">
                         <svg
                             className="w-6 h-6"
-                            fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +107,6 @@ export default function About() {
                                     <Link href="/">Home</Link>
                                 </div>
                                 <div
-                                  
                                     className="lg:ml-[4rem] text-xl border-b border-white lg:border-black"
                                 >
                                     About Us
@@ -120,7 +118,7 @@ export default function About() {
             </div>
             <div className="flex flex-col items-center">
                 <div className="flex flex-col items-center w-[90vw]">
-                    <h1 className="text-4xl font-bold mb-8 mt-16">About Us</h1>
+                    <h1 className="text-4xl font-bold mb-8 mt-8">About Us</h1>
                     <div>
                         <Image src="/truck.jpeg" alt="truck" height={500} width={700} />
                     </div>
