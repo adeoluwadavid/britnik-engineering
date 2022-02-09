@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
+import {motion} from 'framer-motion'
 export default function Home() {
   useEffect(() => {
     const burger = document.getElementById("burger");
@@ -27,8 +28,68 @@ export default function Home() {
       secondBurger.classList.add("hidden");
     });
   }, []);
+  const headerVariants = {
+    hidden:{
+      opacity: 0,
+      y : '10vh'
+    },
+    visible:{
+      opacity: 1,
+      y:0,
+      transition:{
+        type: 'spring', delay: 0.5, duration: 3
+      }
+    },
+    exit:{
+      x: '-100vw',
+      transition:{
+        ease: 'easeInOut'
+      }
+    }
+  }
+  const subHeaderVariants1 = {
+    hidden:{
+      opacity: 0,
+      y : '10vh'
+    },
+    visible:{
+      opacity: 1,
+      y:0,
+      transition:{
+        type: 'spring', delay: 1, duration: 3
+      }
+    },
+    exit:{
+      x: '-100vw',
+      transition:{
+        ease: 'easeInOut'
+      }
+    }
+  }
+  const subHeaderVariants2 = {
+    hidden:{
+      opacity: 0,
+      y : '10vh'
+    },
+    visible:{
+      opacity: 1,
+      y:0,
+      transition:{
+        type: 'spring', delay: 1.5, duration: 3
+      }
+    },
+    exit:{
+      x: '-100vw',
+      transition:{
+        ease: 'easeInOut'
+      }
+    }
+  }
+  
   return (
-    <div>
+    <motion.div
+   
+    >
       <div className="bg-image text-white">
         <div className="bg-image-overlay flex flex-col justify-center">
           <div id="showBg" className="flex flex-col pb-4">
@@ -104,7 +165,7 @@ export default function Home() {
                     Britnik Engineering
                   </div>
                   <div
-                    className="lg:ml-auto text-xl border-b border-whit"
+                    className="lg:ml-auto text-xl border-b border-white "
                   >
                     Home
                   </div>
@@ -116,17 +177,38 @@ export default function Home() {
             </div>
           </div>
           <div className="m-auto text-center">
-            <div className="text-3xl sm:text-5xl md:6xl mb-5 font-bold">
+            <motion.div
+             variants={headerVariants}
+             initial="hidden"
+             animate="visible"
+             exit="exit"
+            className="text-4xl sm:text-5xl md:text-6xl mb-5 font-bold">
               Britnik Engineering
-            </div>
-            <div className="mb-6">An Automobile Engineering Company </div>
-            <button className="pl-4 pr-4 pt-2 pb-2 sm:pl-16 sm:pr-16 sm:pt-4 sm:pb-4 rounded bg-white text-blue-500 text-base font-bold">
+            </motion.div>
+            <motion.div 
+            variants={subHeaderVariants1}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className="mb-6">An Automobile Engineering Company </motion.div>
+            <motion.button
+            variants={subHeaderVariants2}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className="pl-4 pr-4 pt-2 pb-2 sm:pl-16 sm:pr-16 sm:pt-4 sm:pb-4 rounded bg-white text-blue-500 text-base font-bold">
               <Link href="/about">VIEW SERVICES</Link>
-            </button>
+            </motion.button>
           </div>
         </div>
       </div>
-      <div className="flex justify-center">
+      <motion.div 
+      variants={headerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      exit="exit"
+      className="flex justify-center">
         <div className="w-[80vw] grid md:grid-cols-2 lg:grid-cols-3 gap-4 p-16">
           <div className="text-center">
             <Image
@@ -162,8 +244,14 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="flex justify-center bg-gray-100">
+      </motion.div>
+      <motion.div
+      variants={headerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      exit="exit"
+      className="flex justify-center bg-gray-100">
         <div className="sm:w-[80vw] p-16 grid lg:grid-cols-2  gap-4">
           <div className="mb-8">
             <div className="text-4xl font-bold">Who We Are?</div>
@@ -182,8 +270,14 @@ export default function Home() {
           </div>
           <Image src="/truck.jpeg" alt="car" height={500} width={700} />
         </div>
-      </div>
-      <div className="flex justify-center p-6 sm:p-24">
+      </motion.div>
+      <motion.div
+      variants={headerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      exit="exit"
+      className="flex justify-center p-6 sm:p-24">
         <div className="sm:w-[80vw] grid lg:grid-cols-2  gap-8 ">
           <div>
             <div className="border pl-16 pr-16 pt-8 pb-8 text-lg font-thin break-words">
@@ -231,13 +325,13 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
       <footer className="h-20 w-screen bg-blue-500 flex justify-center items-center">
         <div className="text-lg text-white">
           {" "}
           Copyright © 2022 Britnik Engineering.
         </div>
       </footer>
-    </div>
+    </motion.div>
   );
 }
