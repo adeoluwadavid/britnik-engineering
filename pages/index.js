@@ -104,8 +104,7 @@ export default function Home() {
                     Britnik Engineering
                   </div>
                   <div
-                    style={{ borderBottom: "1px solid white" }}
-                    className="lg:ml-auto text-xl"
+                    className="lg:ml-auto text-xl border-b border-whit"
                   >
                     Home
                   </div>

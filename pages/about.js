@@ -68,54 +68,54 @@ export default function About() {
                         </svg>
                     </div>
                 </div>
-                <div id="menu" className="hidden lg:block text-white">
-                <div className="flex flex-col items-center lg:flex-row p-3 lg:bg-black ">
-                    <div className="mb-5 lg:mb-0 mr-5 lg:ml-[10vw] flex items-center">
-                        <Image
-                            src="/mobile-phone.png"
-                            alt="smartphone"
-                            width={25}
-                            height={25}
-                        />
-                        <span className="ml-2">09082183969</span>
+                <div id="menu" className="hidden lg:block">
+                    <div className="flex flex-col items-center lg:flex-row p-3 lg:bg-black text-white">
+                        <div className="mb-5 lg:mb-0 mr-5 lg:ml-[10vw] flex items-center">
+                            <Image
+                                src="/mobile-phone.png"
+                                alt="smartphone"
+                                width={25}
+                                height={25}
+                            />
+                            <span className="ml-2">09082183969</span>
+                        </div>
+                        <div className="mb-5 lg:mb-0 mr-5 flex items-center">
+                            <Image
+                                src="/location.png"
+                                alt="smartphone"
+                                width={25}
+                                height={25}
+                            />
+                            <span className="ml-2">30 Ayepe Zone A, New Ife Road, Ibadan</span>
+                        </div>
+                        <div className="mb-5 lg:mb-0 mr-5 flex items-center">
+                            <Image
+                                src="/envelope.png"
+                                alt="smartphone"
+                                width={25}
+                                height={25}
+                            />
+                            <span className="ml-2">britnikengineering@gmail.com</span>
+                        </div>
                     </div>
-                    <div className="mb-5 lg:mb-0 mr-5 flex items-center">
-                        <Image
-                            src="/location.png"
-                            alt="smartphone"
-                            width={25}
-                            height={25}
-                        />
-                        <span className="ml-2">30 Ayepe Zone A, New Ife Road, Ibadan</span>
-                    </div>
-                    <div className="mb-5 lg:mb-0 mr-5 flex items-center">
-                        <Image
-                            src="/envelope.png"
-                            alt="smartphone"
-                            width={25}
-                            height={25}
-                        />
-                        <span className="ml-2">britnikengineering@gmail.com</span>
-                    </div>
-                </div>
-                <div className="flex justify-center">
-                    <div className="lg:flex w-[50vw] lg:w-[80vw] flex-col ">
-                        <div className="flex pt-8 justify-around">
-                            <div className=" hidden lg:block text-2xl">
-                                <Link href="/">Britnik Engineering</Link>
-                            </div>
-                            <div className="lg:ml-auto text-xl">
-                                <Link href="/">Home</Link>
-                            </div>
-                            <div
-                                style={{ borderBottom: "1px solid white" }}
-                                className="lg:ml-[4rem] text-xl"
-                            >
-                                About Us
+                    <div className="flex justify-center">
+                        <div className="lg:flex w-[50vw] lg:w-[80vw] flex-col text-white lg:text-black">
+                            <div className="flex pt-8 justify-around">
+                                <div className=" hidden lg:block text-2xl">
+                                    <Link href="/">Britnik Engineering</Link>
+                                </div>
+                                <div className="lg:ml-auto text-xl">
+                                    <Link href="/">Home</Link>
+                                </div>
+                                <div
+                                  
+                                    className="lg:ml-[4rem] text-xl border-b border-white lg:border-black"
+                                >
+                                    About Us
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 </div>
             </div>
             <div className="flex flex-col items-center">
@@ -130,7 +130,7 @@ export default function About() {
                         Repairing, Testing, Executing Projects and Carrying out Consultancy
                         services in Automotive Engineering.{" "}
                     </div>
-                    <div className="mb-24 mt-8 font-thin text-xl max-w-[700px]">
+                    <div className="mb-24 mt-4 font-thin text-xl max-w-[700px]">
                         We have a management team of COREN, NSE, NImechE, AutoEI Certified
                         Professional Mechanical Engineers, Auto Rewires, Auto Air
                         Conditioning Technicians and Panel Beaters all working together to

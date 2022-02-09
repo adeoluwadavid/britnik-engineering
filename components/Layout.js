@@ -6,7 +6,7 @@ export default function Layout({ children }) {
       <Head>
         <title>Britnik Engineering</title>
         <meta name="description" content="Britnik Engineering Web App" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/britnik2.png" />
       </Head>
       <div className="font-body">
         {children}
