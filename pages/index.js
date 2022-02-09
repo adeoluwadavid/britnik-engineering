@@ -1,37 +1,37 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect } from "react";
 export default function Home() {
   useEffect(() => {
-    const burger = document.getElementById('burger');
-    const secondBurger = document.getElementById('burger2')
-    const menu = document.getElementById('menu')
-    burger.addEventListener('click', () => {
-      if (menu.classList.contains('hidden')) {
-        menu.classList.remove('hidden');
+    const burger = document.getElementById("burger");
+    const secondBurger = document.getElementById("burger2");
+    const menu = document.getElementById("menu");
+    burger.addEventListener("click", () => {
+      if (menu.classList.contains("hidden")) {
+        menu.classList.remove("hidden");
       } else {
-        menu.classList.add('hidden')
+        menu.classList.add("hidden");
       }
-      document.getElementById('showBg').style = 'background-color: #3b82f6'
-      secondBurger.classList.remove('hidden');
-      burger.classList.add('hidden')
-    })
-    secondBurger.addEventListener('click', () => {
-      if (menu.classList.contains('hidden')) {
-        menu.classList.remove('hidden')
+      document.getElementById("showBg").style = "background-color: #3b82f6";
+      secondBurger.classList.remove("hidden");
+      burger.classList.add("hidden");
+    });
+    secondBurger.addEventListener("click", () => {
+      if (menu.classList.contains("hidden")) {
+        menu.classList.remove("hidden");
       } else {
-        menu.classList.add('hidden')
+        menu.classList.add("hidden");
       }
-      document.getElementById('showBg').style.backgroundColor = null;
-      burger.classList.remove('hidden');
-      secondBurger.classList.add('hidden')
-    })
-
-  }, [])
+      document.getElementById("showBg").style.backgroundColor = null;
+      burger.classList.remove("hidden");
+      secondBurger.classList.add("hidden");
+    });
+  }, []);
   return (
     <div>
       <div className="bg-image text-white">
         <div className="bg-image-overlay flex flex-col justify-center">
-          <div  id="showBg" className="flex flex-col pb-4">
+          <div id="showBg" className="flex flex-col pb-4">
             <div className=" lg:hidden self-end mr-8">
               <div id="burger" className="pt-4">
                 <svg
@@ -50,7 +50,20 @@ export default function Home() {
                 </svg>
               </div>
               <div className="hidden pt-4" id="burger2">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  ></path>
+                </svg>
               </div>
             </div>
             <div className="flex justify-center">
@@ -87,18 +100,29 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex pt-8 justify-around">
-                  <div className="hidden lg:block text-2xl">Britnik Engineering</div>
-                  <div className="lg:ml-auto text-xl">Home</div>
-                  <div className="lg:ml-[4rem] text-xl">About Us</div>
+                  <div className="hidden lg:block text-2xl">
+                    Britnik Engineering
+                  </div>
+                  <div
+                    style={{ borderBottom: "1px solid white" }}
+                    className="lg:ml-auto text-xl"
+                  >
+                    Home
+                  </div>
+                  <div className="lg:ml-[4rem] text-xl">
+                    <Link href="/about">About Us</Link>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div className="m-auto text-center">
-            <div className="text-3xl sm:text-5xl md:6xl mb-5 font-bold">Britnik Engineering</div>
+            <div className="text-3xl sm:text-5xl md:6xl mb-5 font-bold">
+              Britnik Engineering
+            </div>
             <div className="mb-6">An Automobile Engineering Company </div>
             <button className="pl-4 pr-4 pt-2 pb-2 sm:pl-16 sm:pr-16 sm:pt-4 sm:pb-4 rounded bg-white text-blue-500 text-base font-bold">
-              VIEW SERVICES
+              <Link href="/about">VIEW SERVICES</Link>
             </button>
           </div>
         </div>
@@ -175,9 +199,12 @@ export default function Home() {
           </div>
           <div>
             <div className="border pl-16 pr-16 pt-8 pb-8 text-lg font-thin break-words">
-              <div> I spent an abnormal amount of time searching for the right
-                engineer. I contacted support and got a message back very quickly
-                when i had a problem. Thank you </div>
+              <div>
+                {" "}
+                I spent an abnormal amount of time searching for the right
+                engineer. I contacted support and got a message back very
+                quickly when i had a problem. Thank you{" "}
+              </div>
             </div>
             <div className="ml-8 mt-4">
               <div className="font-bold text-xl">David Ugwu</div>
@@ -207,7 +234,10 @@ export default function Home() {
         </div>
       </div>
       <footer className="h-20 w-screen bg-blue-500 flex justify-center items-center">
-        <div className="text-lg text-white"> Copyright © 2022 Britnik Engineering.</div>
+        <div className="text-lg text-white">
+          {" "}
+          Copyright © 2022 Britnik Engineering.
+        </div>
       </footer>
     </div>
   );
