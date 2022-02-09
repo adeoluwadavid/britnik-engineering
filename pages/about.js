@@ -53,7 +53,7 @@ export default function About() {
                     </div>
                     <div className="hidden pt-4" id="burger2">
                         <svg
-                            className="w-6 h-6"
+                            className="w-6 h-6 text-white"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg"
