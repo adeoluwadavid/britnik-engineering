@@ -91,7 +91,7 @@ export default function Home() {
       <div className="bg-image text-white">
         <div className="bg-image-overlay flex flex-col justify-center">
           <div id="showBg" className="flex flex-col pb-4">
-            <div className=" lg:hidden self-end mr-8">
+            <div className=" lg:hidden self-end mr-8 cursor-pointer">
               <div id="burger" className="pt-4">
                 <svg
                   className="w-6 h-6"
@@ -206,7 +206,8 @@ export default function Home() {
       whileInView="visible"
       viewport={{ once: true }}
       exit="exit"
-      className="flex justify-center">
+      className="flex flex-col justify-center">
+         <div className="text-4xl font-bold text-center mt-8">Who We Are?</div>
         <div className="w-[80vw] grid md:grid-cols-2 lg:grid-cols-3 gap-4 p-16">
           <div className="text-center">
             <Image
@@ -252,8 +253,8 @@ export default function Home() {
       className="flex justify-center bg-gray-100">
         <div className="sm:w-[80vw] p-16 grid lg:grid-cols-2  gap-4">
           <div className="mb-8">
-            <div className="text-4xl font-bold">Who We Are?</div>
-            <div className="font-thin text-lg mb-12">
+            <div className="text-4xl font-bold">Our Services</div>
+            <div className="font-thin text-lg mb-8">
               We service and repair Modern Cars; Mini Trucks, Sports Utility
               Vehicles and Saloons. We are a company with experience in
               Planning, Repairing, Testing, Executing Projects and Carrying out
@@ -263,7 +264,7 @@ export default function Home() {
               Conditioning Technicians and Panel …
             </div>
             <button className="bg-white pl-6 pr-6 pt-3 pb-3 rounded border border-blue-500 text-blue-500 font-bold">
-              READ MORE
+             <Link href="/about"> READ MORE</Link>
             </button>
           </div>
           <Image src="/truck.jpeg" alt="car" height={500} width={700} />
@@ -275,7 +276,9 @@ export default function Home() {
       whileInView="visible"
       viewport={{ once: true }}
       exit="exit"
-      className="flex justify-center p-6 sm:p-24">
+      className="flex flex-col justify-center p-6 sm:p-24">
+        <div className="text-4xl font-bold text-center mb-4">Clients Testimonials</div>
+        <p className="text-xl text-center font-thin mb-8">Read the reviews from many of our happy clients</p>
         <div className="sm:w-[80vw] grid lg:grid-cols-2  gap-8 ">
           <div>
             <div className="border pl-16 pr-16 pt-8 pb-8 text-lg font-thin break-words">

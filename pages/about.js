@@ -34,7 +34,7 @@ export default function About() {
                 id="showBg"
                 className="flex flex-col pb-4"
             >
-                <div className=" lg:hidden self-end mr-8">
+                <div className=" lg:hidden self-end mr-8 cursor-pointer">
                     <div id="burger" className="pt-4">
                         <svg
                             className="w-6 h-6"
