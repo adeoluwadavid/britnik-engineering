@@ -87,9 +87,7 @@ export default function Home() {
   }
   
   return (
-    <motion.div
-   
-    >
+    <div>
       <div className="bg-image text-white">
         <div className="bg-image-overlay flex flex-col justify-center">
           <div id="showBg" className="flex flex-col pb-4">
@@ -332,6 +330,6 @@ export default function Home() {
           Copyright © 2022 Britnik Engineering.
         </div>
       </footer>
-    </motion.div>
+    </div>
   );
 }
