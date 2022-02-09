@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 export default function Home() {
   useEffect(() => {
     const burger = document.getElementById("burger");
@@ -29,63 +29,63 @@ export default function Home() {
     });
   }, []);
   const headerVariants = {
-    hidden:{
+    hidden: {
       opacity: 0,
-      y : '10vh'
+      y: '10vh'
     },
-    visible:{
+    visible: {
       opacity: 1,
-      y:0,
-      transition:{
+      y: 0,
+      transition: {
         type: 'spring', delay: 0.5, duration: 3
       }
     },
-    exit:{
+    exit: {
       x: '-100vw',
-      transition:{
+      transition: {
         ease: 'easeInOut'
       }
     }
   }
   const subHeaderVariants1 = {
-    hidden:{
+    hidden: {
       opacity: 0,
-      y : '10vh'
+      y: '10vh'
     },
-    visible:{
+    visible: {
       opacity: 1,
-      y:0,
-      transition:{
+      y: 0,
+      transition: {
         type: 'spring', delay: 1, duration: 3
       }
     },
-    exit:{
+    exit: {
       x: '-100vw',
-      transition:{
+      transition: {
         ease: 'easeInOut'
       }
     }
   }
   const subHeaderVariants2 = {
-    hidden:{
+    hidden: {
       opacity: 0,
-      y : '10vh'
+      y: '10vh'
     },
-    visible:{
+    visible: {
       opacity: 1,
-      y:0,
-      transition:{
+      y: 0,
+      transition: {
         type: 'spring', delay: 1.5, duration: 3
       }
     },
-    exit:{
+    exit: {
       x: '-100vw',
-      transition:{
+      transition: {
         ease: 'easeInOut'
       }
     }
   }
-  
+
   return (
     <div>
       <div className="bg-image text-white">
@@ -176,38 +176,38 @@ export default function Home() {
           </div>
           <div className="m-auto text-center">
             <motion.div
-             variants={headerVariants}
-             initial="hidden"
-             animate="visible"
-             exit="exit"
-            className="text-4xl sm:text-5xl md:text-6xl mb-5 font-bold">
+              variants={headerVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              className="text-4xl sm:text-5xl md:text-6xl mb-5 font-bold">
               Britnik Engineering
             </motion.div>
-            <motion.div 
-            variants={subHeaderVariants1}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            className="mb-6">An Automobile Engineering Company </motion.div>
+            <motion.div
+              variants={subHeaderVariants1}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              className="mb-6">An Automobile Engineering Company </motion.div>
             <motion.button
-            variants={subHeaderVariants2}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            className="pl-4 pr-4 pt-2 pb-2 sm:pl-16 sm:pr-16 sm:pt-4 sm:pb-4 rounded bg-white text-blue-500 text-base font-bold">
+              variants={subHeaderVariants2}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              className="pl-4 pr-4 pt-2 pb-2 sm:pl-16 sm:pr-16 sm:pt-4 sm:pb-4 rounded bg-white text-blue-500 text-base font-bold">
               <Link href="/about">VIEW SERVICES</Link>
             </motion.button>
           </div>
         </div>
       </div>
-      <motion.div 
-      variants={headerVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      exit="exit"
-      className="flex flex-col justify-center">
-         <div className="text-4xl font-bold text-center mt-8">Who We Are?</div>
+      <motion.div
+        variants={headerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        exit="exit"
+        className="flex flex-col items-center">
+        <div className="text-4xl font-bold text-center mt-8">Who We Are?</div>
         <div className="w-[80vw] grid md:grid-cols-2 lg:grid-cols-3 gap-4 p-16">
           <div className="text-center">
             <Image
@@ -245,12 +245,12 @@ export default function Home() {
         </div>
       </motion.div>
       <motion.div
-      variants={headerVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      exit="exit"
-      className="flex justify-center bg-gray-100">
+        variants={headerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        exit="exit"
+        className="flex justify-center bg-gray-100">
         <div className="sm:w-[80vw] p-16 grid lg:grid-cols-2  gap-4">
           <div className="mb-8">
             <div className="text-4xl font-bold">Our Services</div>
@@ -264,19 +264,19 @@ export default function Home() {
               Conditioning Technicians and Panel …
             </div>
             <button className="bg-white pl-6 pr-6 pt-3 pb-3 rounded border border-blue-500 text-blue-500 font-bold">
-             <Link href="/about"> READ MORE</Link>
+              <Link href="/about"> READ MORE</Link>
             </button>
           </div>
           <Image src="/truck.jpeg" alt="car" height={500} width={700} />
         </div>
       </motion.div>
       <motion.div
-      variants={headerVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      exit="exit"
-      className="flex flex-col justify-center p-6 sm:p-24">
+        variants={headerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        exit="exit"
+        className="flex flex-col justify-center p-6 sm:p-24">
         <div className="text-4xl font-bold text-center mb-4">Clients Testimonials</div>
         <p className="text-xl text-center font-thin mb-8">Read the reviews from many of our happy clients</p>
         <div className="sm:w-[80vw] grid lg:grid-cols-2  gap-8 ">
